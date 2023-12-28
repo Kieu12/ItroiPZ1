@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Passanger xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1</Id>
+  <Name>Name</Name>
+  <Passport_Num>Passport Number</Passport_Num>
+  <Email>Email</Email>
+  <Tickets>
+    <Ticket>
+      <Id>1</Id>
+      <Flight_Id>1</Flight_Id>
+      <Price>0</Price>
+      <Seat>Seat</Seat>
+      <Class>Class</Class>
+    </Ticket>
+  </Tickets>
+</Passanger>

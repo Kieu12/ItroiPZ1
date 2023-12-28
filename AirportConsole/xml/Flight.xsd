@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Flight" nillable="true" type="Flight" />
+  <xs:complexType name="Flight">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Depart" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Destin" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Crews" type="ArrayOfCrew" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Passangers" type="ArrayOfPassanger" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Tickets" type="ArrayOfTicket" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityWithId">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Passanger">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Passport_Num" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Tickets" type="ArrayOfTicket" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ticket" nillable="true" type="Ticket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Ticket">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityWithId">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Flight_Id" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Price" type="xs:float" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Seat" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Class" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Crew">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Flight_Id" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Tickets" type="ArrayOfTicket" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCrew">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Crew" nillable="true" type="Crew" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPassanger">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Passanger" nillable="true" type="Passanger" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

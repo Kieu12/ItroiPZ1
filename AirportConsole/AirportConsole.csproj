@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>LibraryConsole</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="xml\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="xml\Author.xml" />
+      <None Remove="xml\Author.html" />
+      <None Remove="xml\Author.xsd" />
+      <None Remove="xml\Author.xsl" />
+      <None Remove="xml\Book.html" />
+      <None Remove="xml\Book.xml" />
+      <None Remove="xml\Book.xsd" />
+      <None Remove="xml\Book.xsl" />
+      <None Remove="xml\Genre.html" />
+      <None Remove="xml\Genre.xml" />
+      <None Remove="xml\Genre.xsd" />
+      <None Remove="xml\Genre.xsl" />
+      <None Remove="xml\Reader.html" />
+      <None Remove="xml\Reader.xml" />
+      <None Remove="xml\Reader.xsd" />
+      <None Remove="xml\Reader.xsl" />
+    </ItemGroup>
+
+</Project>
