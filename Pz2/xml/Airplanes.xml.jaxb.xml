@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Airplanes xmlns="http://nure.ua/entity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nure.ua/entity Airplanes.xsd">
+    <Airplane Id="1">
+        <Airplane_Title>Doctor Strange</Airplane_Title>
+        <Duration>1000</Duration>
+        <Destination>3D</Destination>
+        <Ticket Id="0">
+            <Ticket_Number>1</Ticket_Number>
+            <Seat_Number>11A</Seat_Number>
+            <Purchase_Date>2020-10-10</Purchase_Date>
+            <Passenger Id="1">
+                <Name>Gleb</Name>
+                <Surname>Nikiforow</Surname>
+            </Passenger>
+        </Ticket>
+    </Airplane>
+</Airplanes>

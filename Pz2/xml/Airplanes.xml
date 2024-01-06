@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Airplanes xmlns="http://nure.ua/entity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nure.ua/entity Airplanes.xsd">
+    <Airplane Id="1">
+        <Airplane_Title>AN777</Airplane_Title>
+        <Duration>10</Duration>
+        <Destination>Tokyo</Destination>
+        <Ticket Id="0">
+            <Ticket_Number>1</Ticket_Number>
+            <Seat_Number>11A</Seat_Number>
+            <Purchase_Date>2022-11-11</Purchase_Date>
+            <Passenger Id="1">
+                <Name>Alex</Name>
+                <Surname>Grock</Surname>
+            </Passenger>
+        </Ticket>
+    </Airplane>
+</Airplanes>
