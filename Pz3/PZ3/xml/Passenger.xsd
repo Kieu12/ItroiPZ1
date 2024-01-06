@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua/entity"
+            xmlns:ent="http://nure.ua/entity"
+            elementFormDefault="qualified">
+
+    <xsd:include schemaLocation="EntityBase.xsd"/>
+
+    <xsd:complexType name="Passenger">
+        <xsd:complexContent>
+            <xsd:extension base="ent:EntityBase">
+                <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string"/>
+                    <xsd:element name="Surname" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+</xsd:schema>

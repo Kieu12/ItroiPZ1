@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua/entity"
+            xmlns:ent="http://nure.ua/entity"
+            xmlns:tns="http://nure.ua/entity"
+            elementFormDefault="qualified">
+
+    <xsd:include schemaLocation="Ticket.xsd"/>
+    <xsd:include schemaLocation="EntityBase.xsd"/>
+
+    <xsd:complexType name="Airplane">
+        <xsd:complexContent>
+            <xsd:extension base="ent:EntityBase">
+                <xsd:sequence>
+                    <xsd:element name="Airplane_Title" type="xsd:string"/>
+                    <xsd:element name="Duration" type="xsd:string"/>
+                    <xsd:element name="Destination" type="xsd:string"/>
+                    <xsd:element minOccurs="0" maxOccurs="unbounded" name="Ticket" type="tns:Ticket"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>
