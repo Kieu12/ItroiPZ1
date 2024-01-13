@@ -1,0 +1,7 @@
+<p>
+	<a href="list">List</a>
+	<a href="addAirplane.jsp">Add new</a>
+	<a href="addTicket.jsp">Add ticket</a>
+	<a href="findTicket.jsp">Find ticket</a>
+</p>
+<hr />
